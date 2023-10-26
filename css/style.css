@@ -189,5 +189,232 @@ body {
     max-height: 35rem;
   }
 
-  
+  .hero__content {
+    grid-area: content;
+    align-self: self-start;
+    margin-top: 6rem;
+  }
+
+  .hero__img {
+    grid-area: hero__img;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(42%, -12%);
+    z-index: 1;
+  }
 }
+
+@media (min-width: 70em) {
+  .primary-navbar {
+    padding-block: 1.81rem 2.38rem;
+  }
+
+  .hero__container {
+    grid-template-areas: "content hero__img";
+  }
+
+  .hero__content {
+    grid-area: content;
+  }
+
+  .hero__img {
+    grid-area: hero__img;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(35%, -18%);
+    z-index: 1;
+  }
+}
+
+/* Courses */
+
+.cta {
+  background: linear-gradient(180deg, #fff 0%, #f01fff 100%);
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 60em) {
+  .cta {
+    padding-bottom: 9.75rem;
+  }
+}
+
+.courses {
+  display: grid;
+  gap: 2.5rem; 
+}
+
+.card--cta,
+.card--course {
+  border-radius: 0.937rem;
+}
+
+.card--cta {
+  background: var(--clr-grad-primary);
+  padding: 1.5rem 1.8rem 2rem 1.75rem;
+}
+
+.card--course {
+  position: relative;
+  padding: 3.5rem 2rem 2rem;
+  background-color: var(--clr-neutral-100);
+  box-shadow: 0rem 1.5625rem 3.125rem 0rem rgba(6, 22, 141, 0.04);
+}
+
+.card--course p {
+  color: var(--clr-neutral-400);
+}
+
+.card--course *+* {
+  margin-bottom: 1rem;
+}
+
+.card__icon--course {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 50em) and (max-width: 60em) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .course:last-child {
+    padding-bottom: 3rem;
+  }
+
+  .card--cta,
+  .card--course {
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .courses {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.87rem;
+  }
+
+  .card--cta {
+    padding: 4rem 2rem 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .card--course {
+    margin-bottom: 5rem;
+  }
+}
+
+/* Footer */
+
+.footer {
+  padding: 2.25rem 0;
+}
+
+/* Utility Classes */
+
+.container {
+  --default-padding: 1rem;
+  width: min(calc(100% - var(--default-padding)), 69.3rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 50em) and (max-width: 60em) {
+  .container {
+    --default-padding: var(--size-700);
+  }
+}
+
+@media (min-width: 60em) {
+  .container {
+    --default-padding: 10.3rem;
+  }
+}
+
+.heading-primary {
+  font-size: var(--fs-heading-primary);
+}
+
+.heading-secondary {
+  font-size: var(--fs-heading-secondary);
+}
+
+.text-title {
+  font-size: var(--fs-title);
+  line-height: 2rem;
+}
+
+.text-body {
+  font-size: var(--fs-body);
+  line-height: 1.625rem;
+}
+
+.text-bold {
+  font-weight: var(--fw-bold);
+}
+
+.clr-white {
+  color: var(--clr-neutral-100);
+}
+
+.clr-grey {
+  color: var(--clr-neutral-400);
+}
+
+.bg-dark {
+  background-color: var(--clr-primary-900);
+}
+
+.btn {
+  border-radius: 100rem;
+  border: none;
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral-100);
+  padding: 0.8rem 2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.btn.text {
+  background: transparent;
+  color: var(--clr-primary-600);
+  padding-inline: 0;
+}
+
+.btn.text:hover,
+.btn.text:focus-visible {
+  color: #ffa763;
+} 
+
+.btn-primary {
+  background-color: var(--clr-primary-900);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--clr-primary-400);
+}
+
+.btn-secondary {
+  background: var(--clr-grad-secondary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background: var(--clr-grad-secondary-hover);
+}
+
+.btn--idle {
+  background: var(--clr-grad-secondary);
+}
+
+.btn--idle:hover,
+.btn--idle:focus-visible {
+  background: var(--clr-grad-secondary-hover);
+}
+

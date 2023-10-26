@@ -75,4 +75,119 @@ select {
     scroll-behavior: auto !important;
   }
 }
-@keegankartel
+
+:root {
+  --clr-primary-900: #13183F;
+  --clr-primary-600: #F74780;
+  --clr-primary-400: #666CA3;
+
+  --clr-neutral-400: #83869A;
+  --clr-neutral-100: #fff;
+
+  --clr-grad-primary: linear-gradient(180deg, #FF6F48, #F02AA6);
+  --clr-grad-primary-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+
+  --clr-grad-secondary: linear-gradient(180deg, #4851FF, #F02AA6);
+  --clr-grad-secondary-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+
+  --ff-default: 'Plus Jakarta Sans', sans-serif;
+
+  --fs-100: 1rem;
+  --fs-200: 1.125rem;
+  --fs-300: 1.25rem;
+  --fs-400: 1.5rem;
+  --fs-500: 1.75rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+  --fs-800: 3rem;
+  --fs-900: 3.5rem;
+
+
+  --fs-heading-primary: var(--fs-700);
+  --fs-heading-secondary: var(--fs-400);
+  --fs-title: var(--fs-300);
+  --fs-body: var(--fs-100);
+  --fs-btn: var(--fs-100);
+
+  --fw-bold: 800;
+  --fw-700: 700;
+  --fw-regular: 500;
+
+  --size-100: 1rem;
+  --size-200: 1.125rem;
+  --size-300: 1.25rem;
+  --size-400: 1.5rem;
+  --size-500: 1.75rem;
+  --size-600: 2rem;
+  --size-700: 2.5rem;
+  --size-800: 3rem;
+  --size-900: 3.5rem;
+}
+
+@media(min-width: 60em) {
+  :root {
+      --fs-heading-primary: var(--fs-900);
+      --fs-heading-secondary: var(--fs-600);
+      --fs-title: var(--fs-400);
+      --fs-body: var(--fs-200);
+      --fs-btn: var(--fs-200);
+  }
+}
+
+body {
+  font-family: var(--ff-default);
+}
+
+/* Header */
+
+.primary-navbar {
+  padding-block: 1rem 2.38rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__container {
+  display: grid;
+  align-items: center;
+  min-height: 35rem;
+  margin-bottom: 4rem;
+}
+
+.hero__content {
+  max-width: 35ch;
+}
+
+.hero__content p {
+  max-width: 28.5625rem;
+}
+
+@media (max-width: 50em) {
+  .hero__container {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .hero__container {
+    min-height: 45rem;
+  }
+}
+
+.hero__content *+* {
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 48em) {
+  .hero__container {
+    grid-template-areas: 
+    "content hero__img";
+    max-height: 35rem;
+  }
+
+  
+}
